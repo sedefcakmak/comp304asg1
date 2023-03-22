@@ -16,11 +16,12 @@ void zombie_process() {
     pid_t pid = fork();
 
     if (pid == 0) { //for child process
-        sleep(8); //for program to be remain at least 5 seconds
+        
         wait(NULL);
         exit(0);
 
     }
+    sleep(8); //for program to be remain at least 5 seconds (found the problem, last minute change)
     kill(pid, SIGSEGV);
 
     printf("Parent: Child process changed to Zombie process");
