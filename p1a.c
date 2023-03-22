@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+//should be added to run properly on every machine (last minute update)
+#include <sys/types.h>
+#include <sys/wait.h>
 
 //question 1 a
 
